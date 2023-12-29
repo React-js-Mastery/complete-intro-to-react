@@ -428,3 +428,29 @@ const App = () => {
 };
 //  ... other code
 ```
+
+
+## Core React Concepts
+
+1. JSX
+2. Hooks
+3. Effects
+4. Custom Hooks
+5. Handling User Input
+6. Component Composition
+7. React Dev Tools
+
+## React Capabilities
+1. React Router
+2. react-query
+3. Uncontrolled Forms
+4. Class Components
+
+## Special Case React Tools
+1. Error Boundaries
+2. Portals and Refs
+3. Context
+
+## End of Intro
+1. Conclusion
+2. Ways to Expand Your App

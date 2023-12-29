@@ -12,7 +12,7 @@ const AnimalDropdown = () => {
             <select id="animal" value={animal} onChange={(e) => setAnimal(e.target.value)} onBlur={(e) => setAnimal(e.target.value)}>
                 <option>All</option>
                 {ANIMALS.map((animal) => (
-                    <option value={animal}>{animal}</option>
+                    <option key={animal} value={animal}>{animal}</option>
                 ))}
             </select>
         </div>
