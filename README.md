@@ -4,7 +4,7 @@ Course Website: https://react-v8.holt.courses/
 
 ## Pretter
 
-**install Prettier globally **
+**install Prettier globally**
 
 ```bash
 npm install --global prettier
