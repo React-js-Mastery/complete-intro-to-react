@@ -1,40 +1,33 @@
 import { createRoot } from "react-dom/client";
-import Info from "./Info";
-import SearchParams from "./SearchParams";
-import AnimalDropdown from "./AnimalDropdown";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./style.css";
+import Home from "./pages";
+import Courses from "./pages/courses"
+import Navbar from "./componets/Navbar";
+import Footer from "./componets/Footer";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Hooks from "./hooks";
 
 const App = () => {
     return (
         <div className="App">
-
-            <div className="about-container">
-                <h1>About Us!</h1>
-
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Work</th>
-                    </tr>
-
-                    <Info name="Ajay" age="23" work="Web Developer" />
-                    <Info name="Shivay" age="25" work="Freelancer" />
-                    <Info name="Pawan" age="22" work="SDE" />
-
-                </table>
-            </div>
-            <hr />
-            <div className="search-params-container">
-                <SearchParams />
-            </div>
-            <hr />
-            <div className="animal-container">
-                <AnimalDropdown />
-            </div>
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route path="/react-01" element={<Home />} />
+                    <Route path="/react-01/home" element={<Home />} />
+                    <Route path="/react-01/courses" element={<Courses />} />
+                    <Route path="/react-01/about" element={<About />} />
+                    <Route path="/react-01/contact" element={<Contact />} />
+                    <Route path="/react-01/courses/hooks" element={<Hooks />} />
+                </Routes>
+                <Footer />
+            </Router>
         </div>
     );
 };
+
 
 const container = document.getElementById("root");
 const root = createRoot(container);
